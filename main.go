@@ -204,24 +204,3 @@ func WriteFileToAsar(path, filePath string, content []byte) error {
 
 	return nil
 }
-
-func main() {
-	// Specify the path to the Asar archive
-	archivePath := "./app.asar"
-
-	// Read the existing content of package.json
-	content, err := ReadFileFromAsar(archivePath, "package.json")
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Println(content)
-
-	// Write the updated content back to the Asar archive
-	err = WriteFileToAsar(archivePath, "package.json", []byte("{\"name\":\"exodus\",\"productName\":\"Exodus\",\"version\":\"23.5.22\",\"description\":\"Secure, manage, and trade blockchain assets.\",\"homepage\":\"http://www.exodus.com\",\"main\":\"src/app/main/index.js\"}"))
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Println("package.json updated successfully!")
-}
