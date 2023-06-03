@@ -1,4 +1,5 @@
-## Functions Documentation
+The project is a Go package for working with Asar archives. Asar is a file format commonly used in Electron applications to package and compress files. The package provides functions for opening an Asar archive, reading files from the archive, writing files to the archive, and printing the file structure of the archive. 
+
 
 ### roundUp
 ```go
